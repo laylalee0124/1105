@@ -1,0 +1,4 @@
+[Method]
+method load영역이 별도로 존재함. 붕어빵틀을 여기서 불러와서 heap에서 처리하는것뿐.
+method는 heap 영역에 생성하지 않음.
+method 내부변수는 stack에 만듬.
