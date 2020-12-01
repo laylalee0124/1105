@@ -1,0 +1,13 @@
+메서드 유형구분 (4가지
+
+  (형식)  return_type method_name(parameter){}
+  
+	1) return O,        method_name (parameter o)
+ 	2) return O,        method_name (parameter x)
+ 	3) void(=return value x), method_name (parameter o)
+ 	4) void(=return value x), method_name (parameter x)
+ 	
+ 	
+생성자 overoading
+    1) constructorA ()
+    2) constructorA (parameter o)
