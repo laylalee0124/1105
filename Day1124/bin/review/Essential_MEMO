@@ -1,0 +1,11 @@
+// Method overload  =  use same method name with/without parameter
+// Method override  =  redefine method to use in new class.
+
+// Getter for boolean type should be use 'is'with variable name.
+// 'is' from this is ture or faluse.
+
+//-----------------------------------		
+	int = Integer     <-- originally it should be used with Integer class with constructor.
+	Integer nn=new Integer(10);
+	Integer nn2=Integer.valueOf(10);
+//-----------------------------------

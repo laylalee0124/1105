@@ -1,0 +1,28 @@
+[I/O STREAM]
+*Stream
+	input/output은 program의 기준임.
+	- input stream : program으로 읽어들여옴
+	- output stream : program에서 출력해줌
+	- error stream
+	
+	*byte Streams
+		1byte 단위 읽기쓰기
+		- FileInputStream 
+		- FileOutputStream 
+	
+	*char Streams
+		2byte 단위 읽기쓰기
+		- FileReader: 파일이 존재하지 않으면 생성시켜주는 기능이있음.
+		- FileWriter 
+
+	*Standard i/o stream
+		- System.in : Standard input stream
+		- System.out : Standard output stream
+		
+*Buffered Reader
+ 버퍼: 빠르게 byte를 옮기기 위한 손수레 개념. BufferedReader
+
+*in.readLine() : line 단위로 \n, \r까지  읽어들임.
+*Integer : int형 함수들을 처리하기위한 ref class.
+	☆☆☆Integer.parseInt(data);문자열로 되어잇는 숫자문자열을 숫자로 변환해줌
+	
