@@ -1,0 +1,7 @@
+1. Rambda expression을 이용한 static method 참조식
+	- IntBinaryOperator
+	- Classname.staticMethod()
+	- Variable.applyAsInt()
+	- 람다식을 ref형으로 변경해서 쓸 수 있음.
+	- Function을 써서 생성자 참조도 가능 함. = 객체를 생성한다는 의미.
+	

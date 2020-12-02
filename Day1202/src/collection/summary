@@ -1,0 +1,40 @@
+[Collection 유형]
+  *아래 2가지는 collection을 확장 받고 있음.
+ 	1. List <E>
+ 		- 배열과 흡사함.
+		- ArrayList, Vector, LinkedList
+		- ArrayList : 데이터 순차저장.
+		- Vector : Synchronized method가 포함되어있음. multithread상황에서 안전.
+		- LinkedList : 데이터 삽입/삭제가 용이하다(빈번한 삽입/삭제가 쉬움). 앞/뒤 데이터 순서기억, 검색에는 용이하지못하다. 		
+ 	2. Set <E>
+ 		- 순서를 기억하지 않음
+ 		- 데이터 중복 저장 불가. object는 hashcode로 데이터를 구별한다
+ 		- null 저장가능 (중복x이기 때문에 1개).
+		- HashSet : 
+ 		- LinkedHashSet :
+	 	- TreeSet : 기본적으로 오름차순(ascendingSet)으로 정렬되어 저장 됨.
+	 	
+	 	
+[Map 유형] 
+  *Map이 최상위 클래스임.
+ 	3. Map <K, V>
+ 		- key&value의 데이터쌍을 쓰는 구성성 데이터 구조
+ 		- index 없음 (저장순서 기억x).  
+ 		- Key는 unique값, Value는 다양.
+ 		- key를 이용해서 특정 value를 불러올수있음.
+ 		- Hashtable : Synchronized method가 포함되어있음. multithread상황에서 안전.
+ 		- HashMap : 미포함
+ 		- TreeMap : 상하관계. 첫번째/끝 을 관리하는 method가 포함되어있다.
+ 		- LinkedHashMap
+ 		- Properties : HashTable를 상속받은 클래스, key와 value가 String 타입으로 지정되어있음.
+
+[이진 서브 트리]
+	- complete sub tree
+	- full subtree
+	- 전위 순위 : 왼쪽트리만 우선해서 따라내려감/ 노드방문 - 왼쪽 서브 트리 방문 - 오른쪽 서브 트리 방문
+	- 중위 순위 : 왼쪽 서브트리 먼저방문 - 노드방문 - 오른쪽 서브트리 방문
+		ex) 6,3,9,2,5를 가지고 이진트리의 중위순위로 넣으면 오름차순/내림차순 정렬가능
+
+
+**참조 링크
+https://blog.naver.com/nick2615/221560288829
