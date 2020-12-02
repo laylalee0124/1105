@@ -1,0 +1,16 @@
+[JAVA의 4대 개념]
+Inheritance 상속
+	- 자식 클래스는 1개의 부모클래스만 상속만 가능.
+ 
+ 
+Capcell 캡슐화/하이딩.
+	- private로 멤버 변수 접근을 제한하고
+	- public에서 method()를 통해 변수 접근을 허용하는것을 말함.
+	
+
+polymorphism 다형성
+	- class내의 내용에 대한 접근 방법이 다양함.
+
+
+Abstract 추상화.
+	- override를 통해 내용을 계속 재정의 해서 덮어씌우는 경우에는 실제로 필요없는 초기 값을 deadcode로 남겨두는 대신 abstract화 하여 표현하지 않음.

@@ -1,0 +1,15 @@
+next() = 토큰단위까지'만' 읽음.
+nextLine() = 해당줄의 엔터구분자까지 '남은' 데이터를 읽음
+
+String name=sc.next()
+String number=sc.nextLine()
+
+위 상황에서,
+이름 번호 [엔터]
+
+라고 입력할 경우 읽어들이는 것은
+
+next() 이름
+nextLine() 번호
+
+이런식으로 읽어들이게된다

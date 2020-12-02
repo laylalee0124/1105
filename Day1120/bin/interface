@@ -1,0 +1,5 @@
+	
+*Interface Runnable
+interface는 단일상속만 지원하기 때문에, thread-runnable을 쓰면됨.
+
+*interface는 instance화 할수 없음. 왜? 

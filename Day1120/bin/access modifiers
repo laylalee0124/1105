@@ -1,0 +1,14 @@
+[Java - Access Modifiers]
+
+ <Access Control Modifiers>
+	No keyword -  Visible to the package, the default. No modifiers are needed.
+	Private - Visible to the class only
+	Public - Visible to the world
+	Protected - Visible to the package and all subclasses(<-> superclasses). (상속까지 허용) 
+
+
+ <Non-Access Modifiers>
+ 	Static - for creating class methods and variables.
+ 	Final - for finalizing the implementations(구현) of classes, methods, and variables. (거의 공유목적인 상수용으로 쓰여짐)
+ 	Abstract(추상) - for creating abstract classes and methods.
+ 	Synchronized(동기화) and volatile(휘발성) - which are used for threads.

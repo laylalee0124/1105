@@ -1,0 +1,12 @@
+<INTERFACE>
+// inteface의 원래 목적은 method를 사용하는것이 주목적으로 개발되었다.
+	// interface의 field는 무조건 final field이다.
+	// interface의 field는 static field이기 때문에, field 변수들은 가급적 공유자원으로 사용될수 있는 것만 정의하고, static way로 사용하도록 하자고 공유되어있음.
+	// static field 애들은, 객체를 만들지 말고 static way로 사용.  Static way :   ClassName.VariableValue  (ex) Class.a / Class.str
+	int a=0;		// final static int a=0; 와 같은 의미임. 앞에 final static이 생략되어잇다.
+	String str=null;
+	//int b;		// final field에서 값이 정의되지 않았기 때문에 불가능.
+	
+// 기본이 abstract 이므로, abstract 키워드를 사용할 필요가 없음.
+// body가 있는걸 쓸때는 syntax default라는 의미로, default 라고 붙여줌.
+// static도 허용 - static은 값이 있는걸 허용해야 하기 때문에 이도 허용하는것.
