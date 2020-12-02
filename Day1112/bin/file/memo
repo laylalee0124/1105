@@ -1,0 +1,30 @@
+*Byte Streams (문자가 아닌 file들, image등)
+- Java byte streams are used to perform input and output of 8-bit bytes
+	[FileInputStream] 
+
+
+	[FileOutputStream]
+	만약 파일이 존재하지않으면 생성 해준다
+	// Unhandled expection type FileNotFoundException : 해당 파일이 없음.
+	// 문제가 발생된 경우에도 정상적으로 종료될수 있도록 해주는 방법 
+	// 1) throws FileNotFoundException
+	// 2) try{} catch{}
+
+
+
+*Character Streams (문자로 표현되는 file들)
+- Java Character streams are used to perform input and output for 16-bit unicode
+	[FileReader] 
+	캐릭터형 데이터를 읽어오는 타입
+
+
+	[FileWriter]
+
+
+
+
+*Standard Streams
+Scanner class같은걸 쓸때 이거쓴다.
+	Standard Input − This is used to feed the data to user's program and usually a keyboard is used as standard input stream and represented as System.in.
+	Standard Output − This is used to output the data produced by the user's program and usually a computer screen is used for standard output stream and represented as System.out.
+	Standard Error − This is used to output the error data produced by the user's program and usually a computer screen is used for standard error stream and represented as System.err.
