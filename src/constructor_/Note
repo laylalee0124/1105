@@ -1,0 +1,17 @@
+<1112>
+
+*modifier
+	1) public{}은 한 파일내에 1개만 존재할수 있다.
+	2) public{public{}}은 가능
+
+*생성자
+	1) 생성자는 사용자가 따로 지정한게 없으면 시스템이 자동으로 default constructor를 만들어줌.
+	2) 사용자가 생성자를 만들면, default constructor는 만들어지지 않음.
+	3) 그러므로 class당 무조건 최소 1개는 존재하게됨.
+	4) overloading된 생성자를 생성할때는, parameter의 변수이름이 아니라, 변수 갯수로 받아들일 데이터의 저장위치를 결정한다.
+	
+	
+*@Override
+	1) String class의 toString() method를 가져와서 재정의하는데 쓴다. 라는 의미.
+	2) 모든 class는 object의 상속을 받고있다.
+	
