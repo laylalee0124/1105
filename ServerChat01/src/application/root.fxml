@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.FlowPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ServerController">
+   <bottom>
+      <Button fx:id="bttnserver" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBtnServer" prefHeight="35.0" prefWidth="600.0" text="눌러보새오  :)" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <TextArea fx:id="textdisplay" prefHeight="157.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="어느게 진짜개오 :)" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>
