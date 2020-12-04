@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.FlowPane?>
+
+
+<FlowPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <Pane prefHeight="449.0" prefWidth="401.0">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="401.0">
+              <items>
+                <Button mnemonicParsing="false" text="Menu" />
+                  <Button mnemonicParsing="false" text="Edit" />
+                  <Button mnemonicParsing="false" text="Tool" />
+                  <Button mnemonicParsing="false" text="Window" />
+                  <Button mnemonicParsing="false" text="Option" />
+                  <Button mnemonicParsing="false" text="Info" />
+                  <Button mnemonicParsing="false" prefHeight="23.0" prefWidth="66.0" text="Exit" />
+              </items>
+            </ToolBar>
+            <AnchorPane layoutX="22.0" layoutY="48.0" prefHeight="373.0" prefWidth="331.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="197.0" prefHeight="15.0" prefWidth="199.0" text="패스워드좀..:&gt;" />
+                  <Label layoutX="14.0" layoutY="107.0" prefHeight="15.0" prefWidth="208.0" text="아이디입력해주면조케따" />
+                  <PasswordField layoutX="26.0" layoutY="224.0" prefHeight="54.0" prefWidth="138.0" />
+                  <TextField layoutX="26.0" layoutY="129.0" prefHeight="54.0" prefWidth="138.0" />
+                  <Button layoutX="205.0" layoutY="129.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="66.0" text="로그인" />
+                  <Button layoutX="205.0" layoutY="224.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="66.0" text="회원가입" />
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </children>
+</FlowPane>

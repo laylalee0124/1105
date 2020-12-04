@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Servercontroller">
+   <center>
+      <Label alignment="CENTER" prefHeight="115.0" prefWidth="300.0" text="Server:)" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="68.0" />
+         </font>
+      </Label>
+   </center>
+   <bottom>
+      <Button fx:id="bttnstart" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#serverstart" prefHeight="58.0" prefWidth="300.0" text="'-' 서버를 연결할까요?" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
