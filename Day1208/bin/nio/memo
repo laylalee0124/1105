@@ -1,0 +1,4 @@
+non-direct buffer - heap memory할당
+direct buffer - os memory할당
+
+filechannel은 무조건 buffer를 통해서만 read/write가능
