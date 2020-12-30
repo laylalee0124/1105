@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+/* 외부에서 CSS를 설정하는 내용을 정의한 파일 */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+ul, ol, dl{
+	list-style: none;
+}
+
+h1{
+	font-size:0 ;
+}
+
+
+.nav{
+	text-decoration: none;
+	text-align: center;
+	font-size: 50px;
+	color: white;
+}
+
+.m_w{
+	width: 1100px;
+	margin: 0 auto;
+	
+}
+.top-wrap{
+	border-bottom:1px solid #d6d6d6;
+ 	color: black;	
+}
+
+.flex_between{
+	/* 해당 범위 안에 있는 요소를 나란히 배열 */
+	display: flex;
+	/* 지정된 범위안에서 같은 간격을 두고 양쪽배열 */
+	justify-content: space-between;
+	
+}
+.flex-col-center{
+	display:flex;
+	flex-direction: column;
+}
+.top-area{
+	height: 69px;
+}
+
+#top-menu div ul li{
+	margin-left:30px;
+}
+
+
+#header{
+ background-image: url("/img/LE BLANC_blog horizontal.jpg");
+ height: 300px;	
+}
