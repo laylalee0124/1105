@@ -5,7 +5,7 @@
 <configuration>
   
   <!-- properties가 위치한 폴더 경로를 지정해 줌 -->
-  <properties resource="mybatis/dataSource.properties"/>
+  <properties resource="/mybatis/properties/dataSource.properties"/>
   
   <environments default="development">
     <environment id="development">
@@ -13,10 +13,10 @@
       <dataSource type="POOLED">
   
       	<!-- properties 파일에서 부터 EL식으로 읽어옴 -->
-        <property name="driver" value="${driverProperties}"/>
-        <property name="url" value="${urlProperties}"/>
-        <property name="username" value="${usernameProperties}"/>
-        <property name="password" value="${passwordProperties}"/>
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
   
       </dataSource>
     </environment>
@@ -24,8 +24,7 @@
   
   <mappers>
   	<!-- 내가 만들어둔 mapper가 위치한 폴더 경로를 리소스에 넣어줌 -->
-    <mapper resource="mybatis/mapper/mapper-member.xml"/>
-    <mapper resource="mybatis/mapper/mapper-board.xml"/>
+    <mapper resource="/mybatis/mapper/mapper-member.xml"/>
   </mappers>
   
 </configuration>

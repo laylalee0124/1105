@@ -4,7 +4,20 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
 <mapper namespace="memberMapper">
-	<insert id="insert">
+	<select id="login" resultType="dto.LoginResponseDTO"> <!-- LoginResponseDTO에 아래 쿼리로 가져온 정보를 저장 할수있도록 resultType을 지정 --> 
+	<!-- email과 pass가 일치하는 조건의 no, email,name 정보가져오는 쿼리 -->
+		select no, email, name from member
+		where email=#{email} and pass=#{pass}
+	</select>
+	
+	
+	<!-- id는 session에서 만들어준 session.selectOne("memberMapper.memberInfo", no); 와 이름일치시켜야함 -->
+	<select id="memberInfo" resultType="dto.MemberDTO">
+		select * from member
+		where no=#{no}
+	</select>
+	
+	<!-- insert id="insert">
 		insert into member(no, email, pass,name, ip, regdate)
 		values(seq_member.nextval, #{email}, #{pass}, #{name}, #{ip}, sysdate)
 	</insert>
@@ -15,7 +28,7 @@
 	<select id="selectLog" resultType="dto.LogResponseDTO">
 		select no, email, name from member
 		where email=#{email} and pass=#{pass}
-	</select>
+	</select> -->
 </mapper>
 
 

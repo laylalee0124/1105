@@ -18,30 +18,25 @@
 <body>
 	<div class="top-wrap">
 		<!-- 단일태그로 사용 -->
-		<jsp:include page="menu.jsp" />
+		<jsp:include page="/View/common/header.jsp" />
 	</div>
 	<main class="m_v">
+	<h1>메인컨텐츠</h1>
 		<div>메인영역</div>
 	</main>
+	
 	<footer class="m_v">
-		<div>footer</div>
-	</footer>
-	<header>
-		<!-- //////////////////  메인메뉴  ///////////////////// -->
+		<h1>회사정보</h1>
 		<div>
-			<ul class="flow-row">
-				<li>products</li>
+			푸터영역
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
 			</ul>
 		</div>
-
-		<!-- //////////////////  유저메뉴  ///////////////////// -->
-		<section>
-			<div>
-				<a href="#">API메뉴</a> <input type="search" /> <a
-					href="/View/member/Login.jsp"><button>로그인</button></a>
-			</div>
-		</section>
-
-	</header>
+	</footer>
+	
 </body>
 </html>
