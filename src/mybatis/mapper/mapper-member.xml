@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="memberMapper">
+	<select id="login" resultType="dto.LoginResponseDTO"><!-- 왜dto.LoginResponseDTO라고 쓰는지 syntex모르겟음.   LoginResponseDTO에 아래 쿼리로 가져온 정보를 저장 할수있도록 resultType을 지정 --> 
+	<!-- email과 pass가 일치하는 조건의 no, email,name 정보가져와서 dto.LoginResponseDTO에 저장해주는 쿼리 -->
+		select no, email, name from member
+		where email=#{email} and pass=#{pass}
+	</select>
+	
+	
+	<!-- id는 session에서 만들어준 session.selectOne("memberMapper.memberInfo", no); 와 이름일치시켜야함 -->
+	<select id="memberInfo" resultType="dto.MemberDTO">
+		select * from member
+		where no=#{no}
+	</select>
+	
+	<!-- DB를 update하는 명령 -->
+	<update id="memberEdit">
+		update member
+		set pass = #{pass} <!-- DTO를통해 객체로 넘겻기 때문에 파라미터로 받아옴 -->
+		where no = #{no} <!-- parameter로 넘어오는 정보를 자동으로 셋팅 --> 
+	</update>
+	
+	
+	<!-- DB를 delete하는 명령 -->
+	<delete id="delete">
+		delete from member
+		where no = #{no} <!-- parameter로 넘어오는 정보를 자동으로 셋팅 --> 
+	</delete>
+	
+	<insert id="join">
+		insert into member(no, email, pass, name, ip, regdate)
+		values(seq_member.nextval, #{email}, #{pass}, #{name}, #{ip}, sysdate)
+	</insert>
+	
+	<select id="emailCheck" resultType="int">
+	select count(*) from member
+	where email=#{email}
+	</select>
+	
+	
+</mapper>
+
+
+<!--
+Mybatis 의 Mapper 설정 구문 복붙해옴. / insert 부분만 직접 구현. 
+https://mybatis.org/mybatis-3/ko/getting-started.html
+매핑된 SQL 구문 살펴보기
+이 시점에 SqlSession이나 Mapper클래스가 정확히 어떻게 실행되는지 궁금할 것이다. 매핑된 SQL 구문에 대한 내용이 가장 중요하다. 그래서 이 문서 전반에서 가장 자주 다루어진다. 하지만 다음의 두가지 예제를 통해 정확히 어떻게 작동하는지에 대해서는 충분히 이해하게 될 것이다.
+위 예제처럼 구문은 XML이나 애노테이션을 사용해서 정의할 수 있다. 그럼 먼저 XML 을 보자. 마이바티스가 제공하는 대부분의 기능은 XML을 통해 매핑 기법을 사용한다. 이전에 마이바티스를 사용했었다면 쉽게 이해되겠지만 XML 매핑 문서에 이전보다 많은 기능이 추가되었다. SqlSession을 호출하는 XML 기반의 매핑 구문이다. -->
