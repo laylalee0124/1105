@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<header th:fragment="header" id="header">
+		<h1>상단메뉴</h1>
+		<div class="wrap flex-between">
+			<section id="top-logo"  class="flex-column-center">
+				<h1>메인로고</h1>
+				<div class="wrap">
+					<a href="/">
+						<img alt="logo" src="/images/metro_logo1.svg">
+					</a>
+				</div>
+			</section>
+			<nav id="top-menu" class="flex-column-center">
+				<h1>메인메뉴</h1>
+				<div class="wrap flex">
+					<ul class="flex-around ml">
+						<li>
+							<a href="#">WOMEN</a>
+						</li>
+						<li>
+							<a href="#">MEN</a>
+						</li>
+						<li>
+							<a href="#">JUWELRY</a>
+						</li>
+						<li>
+							<a href="#">LIFE STYLE</a>
+						</li>
+						
+					</ul>
+					<ul class="flex-around mr">
+						<li>
+							<a href="#">PROMOTION</a>
+						</li>
+						<li>
+							<a href="#">MAGAZINE M</a>
+						</li>
+						
+					</ul>
+				</div>
+			</nav>
+			<section id="top-user" >
+				<h1>사용자메뉴</h1>
+				<div class="wrap">
+					<ul class="flex">
+						<li>
+							<a href="#">Login</a>
+						</li>
+						<li>
+							<a href="#">Join</a>
+						</li>
+						<li>
+							<a href="#">Mypage</a>
+						</li>
+						<li>
+							<a href="#">Cart(0)</a>
+						</li>
+						<li>
+							<a href="#">Store</a>
+						</li>
+						<li class="img">
+							<a href="#">
+								<img alt="" src="/images/Flag of South Korea.svg">
+							</a>
+						</li>
+						<li class="img">
+							<a href="#">
+								<img alt="" src="/images/search-solid.svg">
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+			</section>
+		</div>
+	</header>
+	
+	<th:block th:fragment="footer">
+		<h1>이용정보 &amp; 회사정보</h1>
+		<div class="wrap">
+			<section id="site-info" class="view-size">
+				<h1>이용정보</h1>
+				<div class="wrap">
+					<div class="wrap-left  flex">
+						<section>
+							<h1>METROCITY</h1>
+							<div class="wrap">
+								<p class="tit">METROCITY</p>
+								<ul class="list">
+									<li>브랜드소개</li>
+									<li>매장안내</li>
+									<li>개인정보취급방침</li>
+									<li>이용약관</li>
+									
+								</ul>
+							</div>
+						</section>
+						<section>
+							<h1>HELP</h1>
+							<div class="wrap">
+								<p class="tit">HELP</p>
+								<ul class="list">
+									<li>고객센터</li>
+									<li>1:1문의하기</li>
+									<li>주문/배송 조회</li>
+								</ul>
+							</div>
+						</section>							
+						<section>
+							<h1>MY PAGE</h1>
+							<div class="wrap">
+								<p class="tit">MY PAGE</p>
+								<ul class="list">
+									<li>로그인</li>
+									<li>회원가입</li>
+									<li>아이디/비밀번호 찾기</li>
+								</ul>
+							</div>
+						</section>
+						<section id="sns">
+							<h1>SNS</h1>
+							<div class="wrap">
+								<p class="tit">SNS</p>
+								<ul class="list flex sns">
+									<li>
+										<a href="#">
+											<img alt="페이스북" src="/images/facebook-square-brands.svg">
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img alt="인스타그램" src="/images/instagram-brands.svg">
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img alt="유튜브" src="/images/youtube-square-brands.svg">
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img alt="카카오" src="/images/product-hunt-brands.svg">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</section>
+					</div>
+					<section id="cs" class="wrap-right">
+						<h1>CS CENTER</h1>
+						<div class="wrap">
+							<p class="tit">ONLINE CS CENTER</p>
+							<ul class="list">
+								<li>1566-1165</li>
+								<li>
+									<span>mom-fri 09:30~18:30</span>
+									<span>(lunch 12:30~13:30)</span>
+								</li>
+								<li>every sat-sun haliday</li>
+							</ul>
+						</div>
+					</section>					
+				</div>
+			</section>
+			<section id="footer-bottom">
+				<h1>footer-info</h1>
+				<div class="wrap view-size flex">
+					<section id="company">
+						<h1>회사정보</h1>
+						<div>
+							<p class="tit">COMPANY</p>
+							<ul class="list">
+								<li>(주)소연94시티코리아|대표이사|김소연</li>
+								<li>
+									06014 인천 어딘가 사는데 맞춰보세요. | 사업등록번호 : 업지롱 <a href="#">사업자정보확인</a>
+								</li>
+								<li>
+									통신판매업신고 : 제 2018 인천어디 11111 | 호스팅사업자 구글 | 개인정보관리책임자 : 김혜경
+								</li>
+								<li>
+									COPYRIGHT AAAAAAAA ALL RIGHTS RESERVED.
+								</li>
+							</ul>
+						</div>
+					</section>
+					<section id="insurance">
+						<h1>보상보험</h1>
+						<div class="wrap">
+							<p class="tit">소비자피해보상 보상보험</p>
+							<ul class="list">
+								<li>고객님은 안전거래를 위해 현금 등으로 결제시 쇼핑몰에서 가입한 구매안전서비스로 소비자</li>
+								<li>
+									피해보상보험 서비스를 이용할수 있습니다.  <a href="#">서비스 가입사실확인</a>
+								</li>
+								
+							</ul>
+						</div>
+					</section>
+				</div>
+			</section>
+		</div>
+	</th:block>
+
+</body>
+</html>

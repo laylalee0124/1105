@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="/css/admin/goodsReg.css">
+</head>
+<body>
+	<div class="flex">
+		<section id="menu">
+			<h1>상품관리</h1>
+			<div class="wrap">
+				<p>상품관리</p>
+				<ul>
+					<li><a href="/goods/reg">상품등록</a></li>
+					<li><a href="/goods/list">상품조회</a></li>
+				</ul>
+			</div>
+		</section>
+		<section id="content">
+			<h1>상품등록</h1>
+			<div class="wrap">
+				<p class="tit">상품등록</p>
+				<form id="goods-form" class="con" action="/goods/reg" method="post"  enctype="multipart/form-data" accept-charset="utf-8">
+					<ul>
+						<li>
+							<label>상품명</label>
+							<input type="text" name="name" placeholder="상풍명입력">
+						</li>
+						<li>
+							<label>판매가</label>
+							<input type="text" name="fixedPrice" placeholder="숫자만 입력">원
+						</li>
+						<li>
+							<label>할인가</label>
+							<div>
+								<button id="set-btn" type="button" class="adm-btn " onclick="setSellingPrice()">설정</button>
+								<button id="non-btn" type="button" class="adm-btn selected" onclick="noneSellingPrice()">설정안함</button>
+								<div id="set-input" style="display: none;">
+									<input  type="text" name="sellingPrice" placeholder="할인판매가 입력" disabled="disabled">원
+								</div>
+							</div>
+						</li>
+						<li>
+							<label>상품이미지</label>
+							<!-- 아래 label태그를 파일버튼으로 활용 -->
+							<div id="file-wrap">
+								<label for="file" class="file-btn">+</label>
+								<input id="file" class="filebox" type="file" name="file" >
+								<p>권장크기 : 1000*1000</p>
+								<div id="img-preview" class="flex-column-end">
+									<div class="control-btn">
+										<ul class="flex">
+											<li><label for="file">수정</label></li>
+											<li onclick="fileDel()">삭제</li>
+										</ul>
+										<input type="hidden" id="fileName" name="fileName">
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<input type="submit" value="저장하기">
+						</li>
+						
+					</ul>
+					<script type="text/javascript">
+						$(function(){
+							$("#img-preview").hide();
+							$("#file").change(fileChanged);
+						});
+						function noneSellingPrice(){
+							$("#non-btn").addClass("selected");
+							$("#set-btn").removeClass("selected");
+							$("#set-input").hide();
+							$("#set-input input").attr("disabled", true);
+						}
+						function setSellingPrice(){
+							$("#set-btn").addClass("selected");
+							$("#non-btn").removeClass("selected");
+							$("#set-input").show();
+							$("#set-input input").attr("disabled", false);
+						}
+						function fileDel(){
+														
+							$.ajax({
+								url: "/goods/temp-delete",
+								type: "post",
+								data: {fileName: $("#fileName").val()},
+								success: function(result){
+									alert(result);
+									$("#img-preview").css("background-image", "none");
+									$("#img-preview").hide();
+								}
+							});
+							
+							if($.browser.msie){
+								$("#file").replaceWith($("#file".clone(true)) );
+							}else{
+								$("#file").val("");
+							}
+							
+							
+						}
+						
+						function fileChanged(){
+							if($("#file").val() != ""){
+								var formData=new FormData();
+								/* 
+								("#goods-form").serializeArray().forEach(function(element){
+									formData.append(elenemt.name, encodeURIComponent(element.val));
+								});
+								 */
+								var fileData=$("#file")[0].files[0];
+								
+								formData.append("tempFile",fileData);
+								
+								$.ajax({
+									url: "/goods/temp-upload",
+									data: formData,
+									type: "post",
+									processData: false, 
+									contentType: false,
+									success: function(result){
+										$("#fileName").val(result);
+										var tempUrl="/temp/"+result;
+										$("#img-preview").css("background-image", "url("+tempUrl+")");
+										$("#img-preview").show();
+									}
+								});
+							}
+							
+						}
+					</script>
+				</form>
+			</div>
+		</section>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+@charset "UTF-8";
+@import url("/css/commons/commons.css");
+
+#visual .view-area{
+	width: 1920px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#visual .wrap .img-list{
+	margin-left: -254px;
+}
+#visual .wrap .img-list li{
+	margin-right: 20px;
+}
+#visual .wrap .img-list li a{
+	display: inline-block;
+	width: 592px;
+	height: 617px;
+	position: relative;
+}
+
+ 
+
+#visual .wrap .img-list li a .img-text{
+	bottom:24px;
+	left:48px;
+	position: absolute;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+}
+#visual .wrap .img-list li a .img-text .main{
+	font-size: 48px;
+}
+#visual .wrap .img-list li a .img-text .sub{
+	font-size: 19.5px;
+	padding: 18px 0;
+}
+
+#visual .bullets li{
+	width: 20px;
+	height: 20px;
+	background-color: #e9e9e9;
+	margin: 0 10px;
+	border-radius: 10px;
+}
+#visual .bullets{
+	width: 240px;
+	margin: 20px auto;
+}
+#visual .bullets li.target{
+	background-color: #000;
+}
+
+#style-report .goods-img{
+	width: 340px;
+	height: 453px;
+}
+
+#style-report .wrap ul li{
+	height: 546px;
+}
+
+#style-report .wrap ul li a .goods-name{
+	padding-top: 12px;
+	color:#979797;
+}
+
+#style-report .wrap ul li a .goods-price{
+	font-size: 15px;
+	color:#333;
+}
+
+
+.view-item .goods-img{
+	width: 260px;
+	height: 260px;
+}
+.view-item .wrap{
+	overflow: hidden;
+}
+.view-item .wrap .goods-wrap ul li{
+	margin-right: 20px;
+}
+.view-item .wrap .goods-wrap ul li a .price .goods-price{
+	font-size: 12.15px;
+	color:#cfcfcf;
+	text-decoration: line-through;
+}
+.view-item .wrap .goods-wrap ul li a .price .goods-sale{
+	font-size: 13.5px;
+	color:#333;
+	margin-left: 5px;
+}
+.view-item .wrap .goods-wrap{
+	position: relative;
+}
+.view-item .wrap .goods-wrap .btn-wrap .btn{
+	position: absolute;
+	top: 119px;
+}
+.view-item .wrap .goods-wrap .btn-wrap .btn-prev{
+	left: 10px;
+}
+.view-item .wrap .goods-wrap .btn-wrap .btn-next{
+	right: 10px;
+}
+
+#magazine .wrap .pic{
+	margin-top: 15px;
+}
+#magazine .wrap .pic ul li img{
+	width: 340px;
+}
+#magazine .wrap .pic ul li p{
+	text-align: center;
+}
+#magazine .wrap .pic ul li p:nth-of-type(1){
+	color: #000;
+	font-size: 15px;
+	padding-top: 15px;
+}
+#magazine .wrap .pic ul li p:nth-of-type(2){
+	color: #979797;
+	font-size: 12px;
+	padding-top: 12px;
+}
+
+
+

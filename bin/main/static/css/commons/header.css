@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+#header>.wrap{
+	height: 60px;
+}
+
+#top-logo .wrap{
+	font-size:0; 
+	padding: 0 20px;
+}
+
+#top-logo .wrap a img{
+	width: 140px;
+	height: 28px;
+}
+#top-menu .wrap{
+	font-size: 12px;
+	
+}
+
+
+#top-menu .wrap ul.ml{
+	width: 280px;
+	border-right: 1px solid #333;
+}
+
+
+#top-menu .wrap ul.mr{
+	width: 200px;
+}
+
+
+
+#top-user .wrap{
+	line-height: 60px;
+}
+#top-user .wrap ul li a{
+	padding : 0 5px;
+	font-size: 12px;
+}
+#top-user .wrap ul li.img a{
+	display: inline-block;
+    padding-top: 3px;
+}
+#top-user .wrap ul li a img{
+	height: 16px;
+}

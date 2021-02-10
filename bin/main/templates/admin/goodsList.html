@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="/css/admin/goodsList.css">
+</head>
+<body>
+	<div class="flex">
+		<section id="menu">
+			<h1>상품관리</h1>
+			<div class="wrap">
+				<p>상품관리</p>
+				<ul>
+					<li><a href="/goods/reg">상품등록</a></li>
+					<li><a href="/goods/list">상품조회</a></li>
+				</ul>
+			</div>
+		</section>
+		<section id="content">
+			<h1>상품정보 조회</h1>
+			<div class="wrap">
+				<p class="tit">상품정보 조회</p>
+				<div class="goods-list">
+					<div class="flex-end">
+						<button type="button">변경사항 저장</button>
+					</div>
+					<ul>
+						<li>NO</li>
+						<li>이미지</li>
+						<li>상품명</li>
+						<li>정가</li>
+						<li>판매가</li>
+						<li>등록일</li>
+						<li>style repoet</li>
+						<li>new</li>
+						<li>best</li>
+					</ul>
+					<ul th:each="dto:${list}" class="item">
+						<li>[[${dto.no}]]</li>
+						<li th:style="|background-image:url(${dto.imgPath});|"></li>
+						<li>[[${dto.name}]]</li>
+						<li>[[${dto.fixedPrice}]]</li>
+						<li>[[${dto.sellingPrice}]]</li>
+						<li>[[${dto.createdDate}]]</li>
+						<li><input type="checkbox" value="styleReport">적용</li>
+						<li><input type="checkbox" value="new">적용</li>
+						<li><input type="checkbox" value="best">적용</li>
+					</ul>
+					<script type="text/javascript">
+						$(function(){
+							$(".item input").change(doChange);
+						});
+						function doChange(){
+			
+							var no=$(this).parent().siblings().first().text();
+							
+								alert($(this).is(":checked"));
+							//*
+							$.ajax({
+								url:"/goods/viewOption",
+								data:{
+									no : no, 
+									title : $(this).val(), 
+									checked : $(this).is(":checked")},
+								type:"post",
+								success: function(){
+									
+								}
+							});
+							//*/
+						}
+					</script>
+				</div>
+			</div>
+		</section>
+	</div>
+
+</body>
+</html>

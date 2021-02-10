@@ -1,0 +1,118 @@
+@charset "UTF-8";
+@import url("/css/commons/commons.css");
+
+
+#menu .wrap{
+	width: 210px;
+	height: 100%;
+	padding: 20px 25px 28px;
+	background-color: #3f4b5c;
+	color: #fff;
+	font-size: 16px;
+}
+#menu .wrap p{
+	padding: 1em 0;
+}
+
+#menu .wrap ul{
+	background-color: #3b4353;
+	padding-top: 1em;
+}
+
+#menu .wrap ul li{
+	padding: 1em;
+	color: #949ca6;
+	font-size: 14px;
+}
+#menu .wrap ul li a{
+	color: #e9e9e9;
+}
+
+#content{
+	padding: 30px 20px;
+	width: 100%;
+	background-color: #f5f7fc;
+}
+#content .wrap .tit{
+	padding: 1em 20px;
+	font-size: 20px;
+	font-weight:700;
+	background-color: #fff;
+	color: #303236;
+}
+#content .wrap .con{
+	padding: 1em 0;
+	font-size: 16px;
+	background-color: #fff;
+	color: #333;
+}
+#content .wrap .con>ul>li{
+	padding: 20px;
+	border-bottom: 2px solid #f5f7fc;
+}
+#content .wrap .con>ul li label:not([for=file]){
+	display: block;
+	padding: 1em 0;
+	border-bottom: 1px solid #f5f7fc;
+	margin-bottom: 1em;
+}
+#content .wrap .con>ul li input:not([type=file]){
+	padding: 0.5em 1em;
+}
+#content .wrap .con>ul li input[name=name]{
+	width: 100%;
+}
+#file-wrap{
+	position: relative;
+}
+.filebox{
+	height:0;
+}
+.file-btn{
+	display: block;
+	width: 120px;
+	height: 120px;
+	border: 1px dashed #777;
+	text-align: center;
+	font-size: 40px;
+	color: #777;
+	line-height: 105px;
+}
+#img-preview{
+	
+	position: absolute; 
+	top:0;
+	left:0;
+	width: 120px;
+	height: 120px;
+	background-size: cover;
+	/* background-image: url("/temp/my-logo_1790013554776900.svg"); */
+}
+
+#img-preview .control-btn{
+	width: 100%;
+	height: 20px;
+	color: #fff;
+	font-size:8px;
+	background-color: rgba(0,0,0,.5);
+}
+#img-preview .control-btn ul li{
+	height: 20px;
+	line-height: 20px;
+	flex: 1;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

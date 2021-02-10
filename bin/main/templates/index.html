@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/js/jquery-3.5.1.min.js"></script>
+<script src="/js/myscript.js"></script>
+<script src="/js/script-btnevent.js"></script>
+<link rel="stylesheet" href="/css/index.css">
+
+</head>
+<body>
+	<th:block th:insert="commons/fragments::header" >
+	</th:block>
+	<main>
+		<h1>메인컨텐츠</h1>
+		<div>
+			<section id="visual">
+				<h1>visual</h1>
+				<div class="wrap view-area">
+					<ul class="flex img-list">
+						<li>
+							<a href="#">
+								<span class="img-text">
+									<span class="main">IMG_1</span>
+									<span class="sub">SALE_1</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="img-text">
+									<span class="main">IMG_2</span>
+									<span class="sub">SALE_2</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="img-text">
+									<span class="main">IMG_3</span>
+									<span class="sub">SALE_3</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="img-text">
+									<span class="main">IMG_4</span>
+									<span class="sub">SALE_4</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="img-text">
+									<span class="main">IMG_5</span>
+									<span class="sub">SALE_5</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="img-text">
+									<span class="main">IMG_6</span>
+									<span class="sub">SALE_6</span>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="flex bullets">
+						<li class="target"></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</section>
+			<section id="style-report">
+				<h1>style report</h1>
+				<div class="wrap view-size">
+					<p class="title">STYLE REPORT</p>
+					<ul class="flex-between">
+						<li>
+							<a class="flex-column" href="#" >
+								<img class="goods-img" alt="goods-img" src="/images/style-report/1612171102_0.png"/>
+								<span class="goods-name">
+								상품명 1
+								</span>
+								<span class="goods-price" th:text="${#numbers.formatCurrency(1000)}">
+								1000
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="flex-column" href="#">
+								<img class="goods-img" alt="goods-img" src="/images/style-report/1612171102_0_1.png"/>
+								<span class="goods-name">
+								상품명 2
+								</span>
+								<span class="goods-price" th:text="${#numbers.formatCurrency(2000)}">
+								2000
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="flex-column" href="#">
+								<img class="goods-img" alt="goods-img" src="/images/style-report/1612171102_0_2.png"/>
+								<span class="goods-name">
+								상품명 3
+								</span>
+								<span class="goods-price" th:text="${#numbers.formatCurrency(3000)}">
+								3000
+								</span>
+							</a>
+						</li>
+						
+					</ul>
+					<ul class="flex-between">
+						<li>
+							<a class="flex-column" href="#">
+								<img class="goods-img" alt="goods-img" src="/images/style-report/1611541616_0.png"/>
+								<span class="goods-name">
+								상품명 4
+								</span>
+								<span class="goods-price" th:text="${#numbers.formatCurrency(4000)}">
+								4000
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="flex-column" href="#">
+								<img class="goods-img" alt="goods-img" src="/images/style-report/1611541616_0_1.png"/>
+								<span class="goods-name">
+								상품명 5
+								</span>
+								<span class="goods-price" th:text="${#numbers.formatCurrency(5000)}">
+								5000
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="flex-column" href="#">
+								<img class="goods-img" alt="goods-img" src="/images/style-report/1611541616_0_2.png"/>
+								<span class="goods-name">
+								상품명 5
+								</span>
+								<span class="goods-price" th:text="${#numbers.formatCurrency(6000)}">
+								6000
+								</span>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+				
+			</section>
+			
+			<section id="new" class="view-item">
+				<h1>new</h1>
+				<div class="wrap view-size">
+					<p class="title">new</p>
+					<div class="goods-wrap">
+						<ul class="flex goods-list">
+							<li>
+								<a class="flex-column" href="#" >
+									<img class="goods-img" alt="goods-img" src="/images/style-report/1612171102_0.png"/>
+									<span class="goods-name">
+									상품명 1
+									</span>
+									<span class="price" >
+										<span class="goods-price" th:text="${#numbers.formatCurrency(1000)}">
+										</span>
+										<span class="goods-sale" th:text="${#numbers.formatCurrency(1000)}">
+										</span>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a class="flex-column" href="#">
+									<img class="goods-img" alt="goods-img" src="/images/style-report/1612171102_0_1.png"/>
+									<span class="goods-name">
+									상품명 2
+									</span>
+									<span class="price" >
+										<span class="goods-price" th:text="${#numbers.formatCurrency(1000)}">
+										</span>
+										<span class="goods-sale" th:text="${#numbers.formatCurrency(1000)}">
+										</span>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a class="flex-column" href="#">
+									<img class="goods-img" alt="goods-img" src="/images/style-report/1612171102_0_2.png"/>
+									<span class="goods-name">
+									상품명 3
+									</span>
+									<span class="price" >
+										<span class="goods-price" th:text="${#numbers.formatCurrency(1000)}">
+										</span>
+										<span class="goods-sale" th:text="${#numbers.formatCurrency(1000)}">
+										</span>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a class="flex-column" href="#">
+									<img class="goods-img" alt="goods-img" src="/images/style-report/1612171102_0_2.png"/>
+									<span class="goods-name">
+									상품명 4
+									</span>
+									<span class="price" >
+										<span class="goods-price" th:text="${#numbers.formatCurrency(1000)}">
+										</span>
+										<span class="goods-sale" th:text="${#numbers.formatCurrency(1000)}">
+										</span>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a class="flex-column" href="#" >
+									<img class="goods-img" alt="goods-img" src="/images/style-report/1612171102_0.png"/>
+									<span class="goods-name">
+									상품명 1
+									</span>
+									<span class="price" >
+										<span class="goods-price" th:text="${#numbers.formatCurrency(1000)}">
+										</span>
+										<span class="goods-sale" th:text="${#numbers.formatCurrency(1000)}">
+										</span>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a class="flex-column" href="#">
+									<img class="goods-img" alt="goods-img" src="/images/style-report/1612171102_0_1.png"/>
+									<span class="goods-name">
+									상품명 2
+									</span>
+									<span class="price" >
+										<span class="goods-price" th:text="${#numbers.formatCurrency(1000)}">
+										</span>
+										<span class="goods-sale" th:text="${#numbers.formatCurrency(1000)}">
+										</span>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a class="flex-column" href="#">
+									<img class="goods-img" alt="goods-img" src="/images/style-report/1612171102_0_2.png"/>
+									<span class="goods-name">
+									상품명 3
+									</span>
+									<span class="price" >
+										<span class="goods-price" th:text="${#numbers.formatCurrency(1000)}">
+										</span>
+										<span class="goods-sale" th:text="${#numbers.formatCurrency(1000)}">
+										</span>
+									</span>
+								</a>
+							</li>
+							<li>
+								<a class="flex-column" href="#">
+									<img class="goods-img" alt="goods-img" src="/images/style-report/1612171102_0_2.png"/>
+									<span class="goods-name">
+									상품명 4
+									</span>
+									<span class="price" >
+										<span class="goods-price" th:text="${#numbers.formatCurrency(1000)}">
+										</span>
+										<span class="goods-sale" th:text="${#numbers.formatCurrency(1000)}">
+										</span>
+									</span>
+								</a>
+							</li>
+							
+						</ul>
+						<div class="btn-wrap">
+							<a  class="btn-prev  btn">
+								<img alt="prev버튼" src="/images/icon_slide_prev_12x22.png"/>
+							</a>
+							<a  class="btn-next  btn">
+								<img alt="prev버튼" src="/images/icon_slide_next_12x22.png"/>
+							</a>
+						</div>
+					</div>
+					
+				</div>
+				
+				
+			</section>
+			<section id="best" class="view-item">
+				<h1>best</h1>
+				<div class="wrap view-size">
+					<p class="title">best</p>
+					<ul class="flex-between">
+						<li>
+							<a class="flex-column" href="#" >
+								<img class="goods-img" alt="goods-img" src="/images/style-report/1612171102_0.png"/>
+								<span class="goods-name">
+								상품명 1
+								</span>
+								<span class="price" >
+									<span class="goods-price" th:text="${#numbers.formatCurrency(1000)}">
+									</span>
+									<span class="goods-sale" th:text="${#numbers.formatCurrency(1000)}">
+									</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="flex-column" href="#">
+								<img class="goods-img" alt="goods-img" src="/images/style-report/1612171102_0_1.png"/>
+								<span class="goods-name">
+								상품명 2
+								</span>
+								<span class="price" >
+									<span class="goods-price" th:text="${#numbers.formatCurrency(1000)}">
+									</span>
+									<span class="goods-sale" th:text="${#numbers.formatCurrency(1000)}">
+									</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="flex-column" href="#">
+								<img class="goods-img" alt="goods-img" src="/images/style-report/1612171102_0_2.png"/>
+								<span class="goods-name">
+								상품명 3
+								</span>
+								<span class="price" >
+									<span class="goods-price" th:text="${#numbers.formatCurrency(1000)}">
+									</span>
+									<span class="goods-sale" th:text="${#numbers.formatCurrency(1000)}">
+									</span>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="flex-column" href="#">
+								<img class="goods-img" alt="goods-img" src="/images/style-report/1612171102_0_2.png"/>
+								<span class="goods-name">
+								상품명 4
+								</span>
+								<span class="price" >
+									<span class="goods-price" th:text="${#numbers.formatCurrency(1000)}">
+									</span>
+									<span class="goods-sale" th:text="${#numbers.formatCurrency(1000)}">
+									</span>
+								</span>
+							</a>
+						</li>
+						
+					</ul>
+					
+				</div>
+				
+			</section>
+			<section id="magazine" class="view-item">
+				<h1>magazine M</h1>
+				<div class="wrap view-size">
+					<p class="title">magazine M</p>
+					<div>
+						<iframe width="1100" height="600" src="https://www.youtube.com/embed/NoZtARQdQAc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="pic">
+						<ul class="flex-between">
+							<li>
+								<img alt="" src="/images/magazine_1.jpg">
+								<p>GALLERIA METROCITY</p>
+								<p>ARCHIVE SHOWROOM &amp; STORE</p>
+							</li>
+							<li>
+								<img alt="" src="/images/magazine_2.jpg">
+								<p>VILLA DI METROCITY</p>
+								<p>LAB INSPIRATION</p>
+							</li>
+							<li>
+								<img alt="" src="/images/magazine_3.jpg">
+								<p>ITALIAN GLAM</p>
+								<p>HAPPY HOUR! APERITIVO</p>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+				
+			</section>
+		</div>
+	</main>
+	<footer th:include="commons/fragments::footer" id="footer" >
+	</footer>
+
+</body>
+</html>

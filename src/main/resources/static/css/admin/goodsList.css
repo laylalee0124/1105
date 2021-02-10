@@ -1,0 +1,103 @@
+@charset "UTF-8";
+@import url("/css/commons/commons.css");
+
+
+#menu .wrap{
+	width: 210px;
+	height: 100%;
+	padding: 20px 25px 28px;
+	background-color: #3f4b5c;
+	color: #fff;
+	font-size: 16px;
+}
+#menu .wrap p{
+	padding: 1em 0;
+}
+
+#menu .wrap ul{
+	background-color: #3b4353;
+	padding-top: 1em;
+}
+
+#menu .wrap ul li{
+	padding: 1em;
+	color: #949ca6;
+	font-size: 14px;
+}
+#menu .wrap ul li a{
+	color: #e9e9e9;
+}
+
+#content{
+	padding: 30px 20px;
+	width: 100%;
+	background-color: #f5f7fc;
+}
+#content .wrap .tit{
+	padding: 1em 20px;
+	font-size: 20px;
+	font-weight:700;
+	background-color: #fff;
+	color: #303236;
+}
+#content .wrap .goods-list{
+	background-color: #fff;
+}
+#content .wrap .goods-list ul{
+	display: flex;
+}
+#content .wrap .goods-list ul:nth-of-type(1){
+	font-weight: 700;
+	color: #fff;
+	background-color: #3b4353;
+	padding: 0.5em 0;
+}
+
+#content .wrap .goods-list ul li:nth-child(1) {
+	width: 50px;
+	text-align: center;
+}
+#content .wrap .goods-list ul li:nth-child(2) {
+	width: 100px;
+}
+#content .wrap .goods-list ul li:nth-child(3) {
+	width: 300px;
+}
+#content .wrap .goods-list ul li:nth-child(4) {
+	width: 100px;
+}
+#content .wrap .goods-list ul li:nth-child(5) {
+	width: 100px;
+}
+#content .wrap .goods-list ul li:nth-child(6) {
+	width: 150px;
+}
+#content .wrap .goods-list ul li:nth-child(7) {
+	width: 100px;
+}
+#content .wrap .goods-list ul li:nth-child(8) {
+	width: 100px;
+}
+#content .wrap .goods-list ul li:nth-child(9) {
+	width: 100px;
+}
+
+#content .wrap .goods-list ul.item li:nth-child(2){
+	height: 100px;
+	background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
